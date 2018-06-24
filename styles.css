@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 3rem;
+}
+h1 {
+    color: #333;
+    font-size: 1.5rem;
+    margin: 3rem 0 .5rem;
+}
+#fecha {
+    margin-bottom: 2rem;
+    color: #999;
+}
+#resultados {
+    width: 90vw;
+    max-width: 1024px;
+    min-height: 65vh;
+    display: grid;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-content: center;
+}
+@media screen and (min-width: 601px) {
+    #resultados {
+        grid-template-columns: 24% 24% 24% 24%;
+    }
+}
+@media screen and (max-width: 600px) {
+    #resultados {
+        grid-template-columns: 45% 45%;
+    }
+}
+.card {
+    font-size: 90%;
+    transition: all .35s ease;
+    border: 1px solid #eee;
+    border-radius: .5rem;
+    box-shadow: 0 2px 25px rgba(0,0,0,.15);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.card:hover{
+    box-shadow: 0 5px 50px rgba(0,0,0,.25);;
+}
+.card div {
+    padding: 0 1rem;
+}
+.card img {
+    margin: 1rem;
+    margin-bottom: .5rem;
+}
+.card .titulo{
+    font-size: 100%;
+    margin-bottom: .5rem;
+}
+.card .precio-ant {
+    display: flex;
+}
+.card .precio {
+    font-size: small;
+    text-decoration: line-through; 
+    color: grey;
+}
+.card .dcto {
+    white-space: nowrap;
+    font-size: small;
+    color: green;
+}
+.card .oferta {
+    font-size: 150%;
+    margin: .5rem 0;
+}
+#cargando {
+    margin-top: -10vh;
+    height:20vh;
+    width: 400%;
+    background: transparent url(https://loading.io/spinners/balls/lg.circle-slack-loading-icon.gif) no-repeat center center;
+    background-size: contain;
+}
+.pie {
+    font-size: .9rem;
+    margin-top: 5rem;
+    color: #999;
+}
+.by {
+    font-size: .9rem;
+    color: #ccc;
+}
